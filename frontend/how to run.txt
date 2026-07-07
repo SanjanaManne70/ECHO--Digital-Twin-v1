@@ -1,0 +1,1 @@
+just copy path of frontend file and then npm run dev

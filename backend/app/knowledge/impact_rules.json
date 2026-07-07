@@ -1,0 +1,23 @@
+{
+  "Learning": {
+    "Learning": 4,
+    "Confidence": 2,
+    "Career": 1
+  },
+
+  "Health": {
+    "Health": 5,
+    "Energy": 4,
+    "Mood": 2
+  },
+
+  "Career": {
+    "Career": 5,
+    "Confidence": 3
+  },
+
+  "Mood": {
+    "Mood": 4,
+    "Learning": 1
+  }
+}
