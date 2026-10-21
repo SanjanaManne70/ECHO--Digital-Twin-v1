@@ -7,3 +7,5 @@ from app.models.insight import Insight   # <--
 from app.models.daily_chapter import DailyChapter
 from .goal import Goal
 from .reflection import Reflection
+from .workflow_run import WorkflowRun
+from .agent_execution_record import AgentExecutionRecord

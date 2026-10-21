@@ -1,15 +1,12 @@
 import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
 
 function DashboardLayout({ children }) {
   return (
-    <div className="flex">
+    <div className="min-h-screen bg-slate-100">
       <Sidebar />
 
-      <div className="flex-1 bg-slate-100 min-h-screen">
-        <Navbar />
-
-        <main className="p-8">
+      <div className="min-h-screen md:ml-64">
+        <main className="p-4 sm:p-6 lg:p-8">
           {children}
         </main>
       </div>

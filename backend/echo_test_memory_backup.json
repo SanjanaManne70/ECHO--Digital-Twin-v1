@@ -1,0 +1,694 @@
+{
+  "memory_events": [
+    {
+      "id": 12,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T15:55:52.636185+05:30"
+    },
+    {
+      "id": 13,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T16:24:13.324742+05:30"
+    },
+    {
+      "id": 14,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T16:35:01.601158+05:30"
+    },
+    {
+      "id": 15,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T16:59:31.864193+05:30"
+    },
+    {
+      "id": 16,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T17:03:51.809036+05:30"
+    },
+    {
+      "id": 17,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-24T17:39:29.552640+05:30"
+    },
+    {
+      "id": 23,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T13:54:54.962002+05:30"
+    },
+    {
+      "id": 24,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T19:03:37.017484+05:30"
+    },
+    {
+      "id": 25,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T19:19:00.583763+05:30"
+    },
+    {
+      "id": 26,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T20:11:59.798975+05:30"
+    },
+    {
+      "id": 27,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T20:16:38.461371+05:30"
+    },
+    {
+      "id": 28,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T20:24:27.831359+05:30"
+    },
+    {
+      "id": 29,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T20:27:18.236926+05:30"
+    },
+    {
+      "id": 30,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T20:31:52.855992+05:30"
+    },
+    {
+      "id": 31,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T21:03:58.804323+05:30"
+    },
+    {
+      "id": 32,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T22:18:44.351028+05:30"
+    },
+    {
+      "id": 33,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-09-25T22:19:11.083881+05:30"
+    },
+    {
+      "id": 34,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T19:54:58.492936+05:30"
+    },
+    {
+      "id": 35,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T19:56:06.206679+05:30"
+    },
+    {
+      "id": 36,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:05:26.222732+05:30"
+    },
+    {
+      "id": 37,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:05:47.726908+05:30"
+    },
+    {
+      "id": 38,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:15:25.502295+05:30"
+    },
+    {
+      "id": 39,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:15:51.029632+05:30"
+    },
+    {
+      "id": 40,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:26:37.765413+05:30"
+    },
+    {
+      "id": 41,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-05T20:53:04.165272+05:30"
+    },
+    {
+      "id": 42,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T00:57:26.043237+05:30"
+    },
+    {
+      "id": 43,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T00:59:00.043515+05:30"
+    },
+    {
+      "id": 44,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T01:10:23.819581+05:30"
+    },
+    {
+      "id": 45,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T01:11:38.449128+05:30"
+    },
+    {
+      "id": 46,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T01:27:01.427858+05:30"
+    },
+    {
+      "id": 47,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T01:53:39.252367+05:30"
+    },
+    {
+      "id": 48,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:04:32.213361+05:30"
+    },
+    {
+      "id": 49,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:05:30.950491+05:30"
+    },
+    {
+      "id": 50,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:08:18.600923+05:30"
+    },
+    {
+      "id": 51,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:18:47.414787+05:30"
+    },
+    {
+      "id": 52,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:26:00.495775+05:30"
+    },
+    {
+      "id": 53,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:44:48.692175+05:30"
+    },
+    {
+      "id": 54,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T02:55:55.239818+05:30"
+    },
+    {
+      "id": 55,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T03:22:21.834337+05:30"
+    },
+    {
+      "id": 57,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T12:02:46.460730+05:30"
+    },
+    {
+      "id": 58,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T12:10:54.456078+05:30"
+    },
+    {
+      "id": 60,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T17:59:23.161506+05:30"
+    },
+    {
+      "id": 61,
+      "user_id": 2,
+      "title": "V2 Multi Agent Test",
+      "description": "Today I completed the multi-agent architecture for ECHO and connected the digital twin with decision making.",
+      "created_at": "2026-10-21T18:01:30.020281+05:30"
+    }
+  ],
+  "memory_analysis": [
+    {
+      "id": 12,
+      "memory_id": 12,
+      "sentiment": "positive",
+      "emotion": "accomplishment",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development related to AI and ECHO's architecture."
+    },
+    {
+      "id": 13,
+      "memory_id": 13,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly contributes to the user's learning and skill development by expanding knowledge on multi-agent architectures and decision making for ECHO."
+    },
+    {
+      "id": 14,
+      "memory_id": 14,
+      "sentiment": "positive",
+      "emotion": "excitement",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly enhances the user's learning and skill development by working on ECHO's complex architecture."
+    },
+    {
+      "id": 15,
+      "memory_id": 15,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly impacts the user's learning by expanding their knowledge and skills in AI and ECHO's architecture."
+    },
+    {
+      "id": 16,
+      "memory_id": 16,
+      "sentiment": "positive",
+      "emotion": "accomplishment",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly contributes to the user's learning and skill development in the field of AI and ECHO's enhancement."
+    },
+    {
+      "id": 17,
+      "memory_id": 17,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development in the field of AI and software engineering."
+    },
+    {
+      "id": 23,
+      "memory_id": 23,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development by introducing new knowledge and enhancing the functionality of ECHO."
+    },
+    {
+      "id": 24,
+      "memory_id": 24,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "low",
+      "reason": "The event directly impacts the user's learning and skill development by expanding their knowledge and proficiency in AI and ECHO's architecture."
+    },
+    {
+      "id": 25,
+      "memory_id": 25,
+      "sentiment": "positive",
+      "emotion": "achievement",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts learning and skill development related to programming and AI."
+    },
+    {
+      "id": 26,
+      "memory_id": 26,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "low",
+      "reason": "The event directly impacts the user's learning and skill development as they have successfully completed a complex technical task."
+    },
+    {
+      "id": 27,
+      "memory_id": 27,
+      "sentiment": "positive",
+      "emotion": "achievement",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly impacts the user's learning and skill development by increasing the understanding of ECHO's architecture and functionality."
+    },
+    {
+      "id": 28,
+      "memory_id": 28,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's knowledge and skill development."
+    },
+    {
+      "id": 29,
+      "memory_id": 29,
+      "sentiment": "positive",
+      "emotion": "pride",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development as they have completed a significant task related to ECHO's development."
+    },
+    {
+      "id": 30,
+      "memory_id": 30,
+      "sentiment": "positive",
+      "emotion": "pride",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development in the field of AI and ECHO's development."
+    },
+    {
+      "id": 31,
+      "memory_id": 31,
+      "sentiment": "positive",
+      "emotion": "excited",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development as they completed a complex task related to ECHO's functioning."
+    },
+    {
+      "id": 32,
+      "memory_id": 32,
+      "sentiment": "positive",
+      "emotion": "achievement",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning by expanding their knowledge and skill set in AI and ECHO development."
+    },
+    {
+      "id": 33,
+      "memory_id": 33,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly relates to skill development and knowledge acquisition."
+    },
+    {
+      "id": 34,
+      "memory_id": 34,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly involves the user's learning and skill development in the domain of artificial intelligence and ECHO's digital twin."
+    },
+    {
+      "id": 35,
+      "memory_id": 35,
+      "sentiment": "positive",
+      "emotion": "excited",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development by expanding their knowledge in AI and digital twin technology."
+    },
+    {
+      "id": 36,
+      "memory_id": 36,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "low",
+      "reason": "The event directly impacts the user's learning and skill development by expanding their knowledge and experience."
+    },
+    {
+      "id": 37,
+      "memory_id": 37,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development by improving the digital twin."
+    },
+    {
+      "id": 38,
+      "memory_id": 38,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts learning by increasing the user's knowledge and skills related to AI and ECHO's architecture."
+    },
+    {
+      "id": 39,
+      "memory_id": 39,
+      "sentiment": "positive",
+      "emotion": "excitement",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly advances the user's learning and skill development in the field of AI and systems engineering."
+    },
+    {
+      "id": 40,
+      "memory_id": 40,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development, as they have completed a complex task related to ECHO's development."
+    },
+    {
+      "id": 41,
+      "memory_id": 41,
+      "sentiment": "positive",
+      "emotion": "accomplishment",
+      "confidence": 0.9,
+      "severity": "low",
+      "reason": "The event directly enhances the user's learning and skill development related to AI and ECHO's architecture."
+    },
+    {
+      "id": 42,
+      "memory_id": 42,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly relates to the user's learning and skill development in the domain of AI and software engineering."
+    },
+    {
+      "id": 43,
+      "memory_id": 43,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly impacts the user's learning and skill development by introducing a new and complex technology (multi-agent architecture) to ECHO."
+    },
+    {
+      "id": 44,
+      "memory_id": 44,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "low",
+      "reason": "The event directly impacts learning and skill development by advancing the project and expanding knowledge in multi-agent architectures and decision making."
+    },
+    {
+      "id": 45,
+      "memory_id": 45,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development by acquiring new knowledge related to ECHO's architecture and functionality."
+    },
+    {
+      "id": 46,
+      "memory_id": 46,
+      "sentiment": "positive",
+      "emotion": "excitement",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly advances the user's learning and skill development in programming and AI."
+    },
+    {
+      "id": 47,
+      "memory_id": 47,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development by expanding their knowledge and practical application of multi-agent architecture."
+    },
+    {
+      "id": 48,
+      "memory_id": 48,
+      "sentiment": "positive",
+      "emotion": "achievement",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly involves learning and skill development."
+    },
+    {
+      "id": 49,
+      "memory_id": 49,
+      "sentiment": "positive",
+      "emotion": "achievement",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly advances the user's learning and skill development by contributing to the completion of a complex technical project."
+    },
+    {
+      "id": 50,
+      "memory_id": 50,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts learning and skill development related to programming and artificial intelligence."
+    },
+    {
+      "id": 51,
+      "memory_id": 51,
+      "sentiment": "positive",
+      "emotion": "excitement",
+      "confidence": 0.95,
+      "severity": "high",
+      "reason": "The event directly impacts the user's learning and skill development by introducing a new technology."
+    },
+    {
+      "id": 52,
+      "memory_id": 52,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The user has successfully completed a complex task related to their professional development."
+    },
+    {
+      "id": 53,
+      "memory_id": 53,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development by improving ECHO's capabilities."
+    },
+    {
+      "id": 54,
+      "memory_id": 54,
+      "sentiment": "positive",
+      "emotion": "proud",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts learning and skill development by introducing new technical knowledge."
+    },
+    {
+      "id": 55,
+      "memory_id": 55,
+      "sentiment": "positive",
+      "emotion": "accomplishment",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly enhances the user's learning and skill development by expanding their knowledge in AI and multi-agent architectures."
+    },
+    {
+      "id": 57,
+      "memory_id": 57,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly involves learning and skill development."
+    },
+    {
+      "id": 58,
+      "memory_id": 58,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development by expanding their knowledge in AI and ECHO's functioning."
+    },
+    {
+      "id": 60,
+      "memory_id": 60,
+      "sentiment": "positive",
+      "emotion": "satisfaction",
+      "confidence": 0.9,
+      "severity": "medium",
+      "reason": "The event directly impacts the user's learning and skill development as they completed a complex task related to ECHO's architecture."
+    },
+    {
+      "id": 61,
+      "memory_id": 61,
+      "sentiment": "positive",
+      "emotion": "accomplishment",
+      "confidence": 0.95,
+      "severity": "medium",
+      "reason": "The event directly advances the user's knowledge and skill development."
+    }
+  ]
+}

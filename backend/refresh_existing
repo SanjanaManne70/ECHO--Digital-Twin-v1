@@ -1,0 +1,97 @@
+from sqlalchemy import func
+
+from app.database.session import SessionLocal
+from app.models.memory_event import MemoryEvent
+from app.agents.agent_context_loader import AgentContextLoader
+from app.agents.reflection_agent import ReflectionAgent
+from app.agents.reflection_persistence import ReflectionPersistence
+
+
+def main():
+    db = SessionLocal()
+
+    try:
+        users = (
+            db.query(
+                MemoryEvent.user_id,
+                func.count(MemoryEvent.id).label("memory_count"),
+            )
+            .group_by(MemoryEvent.user_id)
+            .order_by(MemoryEvent.user_id)
+            .all()
+        )
+
+        if not users:
+            print("No saved memories found. Nothing to refresh.")
+            return
+
+        print("\nExisting memory owners:")
+        for user_id, count in users:
+            print(f"User ID: {user_id} | Saved memories: {count}")
+
+        selected_id = int(input("\nEnter the user ID to refresh: "))
+
+        if selected_id not in {user_id for user_id, _ in users}:
+            print("Invalid user ID. No changes made.")
+            return
+
+        confirm = input(
+            f"Regenerate today's reflection for user {selected_id}? (yes/no): "
+        ).strip().lower()
+
+        if confirm != "yes":
+            print("Cancelled. No changes made.")
+            return
+
+        loader = AgentContextLoader()
+        context = loader.load(
+            db=db,
+            user_id=selected_id,
+        )
+
+        if not context.recent_memories:
+            print("No memories available in the loaded context.")
+            return
+
+        print(
+            f"\nRunning LLM using {len(context.recent_memories)} recent "
+            f"memories and {len(context.snapshots)} snapshots..."
+        )
+
+        result = ReflectionAgent().run(context)
+
+        if not result.success:
+            print("Reflection generation failed:")
+            print(result.errors)
+            return
+
+        print("\n========== GENERATED REFLECTION ==========\n")
+        print(result.data)
+        print("\n==========================================\n")
+
+        save = input("Save this reflection? (yes/no): ").strip().lower()
+
+        if save != "yes":
+            print("Generated only. Nothing saved.")
+            return
+
+        ReflectionPersistence().save(
+            db=db,
+            user_id=selected_id,
+            content=result.data,
+        )
+
+        print("Reflection refreshed successfully.")
+        print("Existing memories were not modified.")
+        print("Twin state, insights, and planner tasks were not replayed.")
+
+    except Exception as exc:
+        db.rollback()
+        print(f"Refresh failed: {type(exc).__name__}: {exc}")
+
+    finally:
+        db.close()
+
+
+if __name__ == "__main__":
+    main()

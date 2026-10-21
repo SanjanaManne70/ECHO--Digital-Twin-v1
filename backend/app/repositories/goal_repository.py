@@ -34,14 +34,12 @@ class GoalRepository:
             .all()
         )
 
-    def update(
-        self,
-        db: Session,
-        goal: Goal,
-    ):
+    def update(self, db: Session, goal: Goal, commit: bool = True):
+        if commit:
+            db.commit()
+            db.refresh(goal)
 
-        db.commit()
-        db.refresh(goal)
+        return goal
 
         return goal
     def delete(
@@ -53,16 +51,11 @@ class GoalRepository:
         db.delete(goal)
         db.commit()
 
-    def get_by_id(
-        self,
-        db: Session,
-        goal_id: int,
-    ):
+    
+    def get_by_id(self, db, goal_id, user_id=None):
+        query = db.query(Goal).filter(Goal.id == goal_id)
 
-        return (
-            db.query(Goal)
-            .filter(
-                Goal.id == goal_id,
-            )
-            .first()
-        )
+        if user_id is not None:
+            query = query.filter(Goal.user_id == user_id)
+
+        return query.first()

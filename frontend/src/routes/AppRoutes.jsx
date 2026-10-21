@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+
+import { Routes, Route, Outlet } from "react-router-dom";
 
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
@@ -9,6 +10,20 @@ import Timeline from "../pages/timeline/Timeline";
 import Memory from "../pages/memory/Memory";
 import Goals from "../pages/goals/Goals";
 import Simulation from "../pages/simulation/Simulation";
+import ExecutionHistory from "../pages/execution-history/ExecutionHistory.jsx";
+import Sidebar from "../components/layout/Sidebar";
+
+function ProtectedLayout() {
+  return (
+    <ProtectedRoute>
+      <Sidebar />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+    </ProtectedRoute>
+  );
+}
+
 function AppRoutes() {
   return (
     <Routes>
@@ -16,43 +31,16 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/current"
-        element={
-          <ProtectedRoute>
-            <CurrentYou />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/timeline"
-        element={<Timeline />}
-      />
-      <Route
-        path="/memory"
-        element={<Memory />}
-      />
-      <Route
-        path="/simulation"
-
-        element={<Simulation />}
-
-    />
-      <Route
-        path="/goals"
-        element={<Goals />}
-      />
+      <Route element={<ProtectedLayout />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/current" element={<CurrentYou />} />
+        <Route path="/goals" element={<Goals />} />
+        <Route path="/timeline" element={<Timeline />} />
+        <Route path="/memory" element={<Memory />} />
+        <Route path="/simulation" element={<Simulation />} />
+        <Route path="/execution-history" element={<ExecutionHistory />} />
+      </Route>
     </Routes>
-    
-    
   );
 }
 

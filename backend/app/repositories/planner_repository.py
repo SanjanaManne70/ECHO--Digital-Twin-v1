@@ -3,17 +3,12 @@ from app.models.planner_task import PlannerTask
 
 class PlannerRepository:
 
-    def create(
-        self,
-        db,
-        task,
-    ):
-
+    def create(self, db, task, commit: bool = True):
         db.add(task)
 
-        db.commit()
-
-        db.refresh(task)
+        if commit:
+            db.commit()
+            db.refresh(task)
 
         return task
 

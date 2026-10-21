@@ -12,8 +12,12 @@ class ReflectionPromptBuilder:
         print(context)
         print("==========================")
         trend = context["trend"]
+
+        decision_result = context.get("decision")
+
         print(type(trend))
         print(trend)
+
         current_text = ""
 
         for state in current:
@@ -45,6 +49,41 @@ class ReflectionPromptBuilder:
             f"Mood Change: {trend.get('mood_change', 0)}\n"
             f"Learning Change: {trend.get('learning_change', 0)}\n"
         )
+        decision_text = ""
+
+        if decision_result and decision_result.success:
+
+            decision = decision_result.data
+
+            if decision:
+
+                if decision.insight:
+                    decision_text += (
+                        f"Insight: {decision.insight.title}\n"
+                        f"{decision.insight.description}\n"
+                        f"Severity: {decision.insight.severity}\n"
+                    )
+
+                if decision.planner:
+                    decision_text += (
+                        f"Planner Action: {decision.planner.title}\n"
+                        f"{decision.planner.description}\n"
+                        f"Priority: {decision.planner.priority}\n"
+                    )
+
+                if decision.goals:
+                    decision_text += "\nGoal Updates:\n"
+
+                    for goal in decision.goals:
+                        decision_text += (
+                            f"- Goal ID: {goal.goal_id}, "
+                            f"Increment: {goal.increment}, "
+                            f"Confidence: {goal.confidence}\n"
+                            f"  Reason: {goal.reason}\n"
+                        )
+
+        if not decision_text:
+            decision_text = "No decision output available."
 
         return f"""
 You are ECHO.
@@ -79,6 +118,11 @@ TREND SUMMARY
 ==============================
 
 {trend_text}
+==============================
+COORDINATED DECISION
+==============================
+
+{decision_text}
 
 ==============================
 RECENT MEMORIES

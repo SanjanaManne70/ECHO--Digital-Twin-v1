@@ -3,17 +3,12 @@ from app.models.insight import Insight
 
 class InsightRepository:
 
-    def create(
-        self,
-        db,
-        insight: Insight,
-    ):
-
+    def create(self, db, insight: Insight, commit: bool = True):
         db.add(insight)
 
-        db.commit()
-
-        db.refresh(insight)
+        if commit:
+            db.commit()
+            db.refresh(insight)
 
         return insight
 

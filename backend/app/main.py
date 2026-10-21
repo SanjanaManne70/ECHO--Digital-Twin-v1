@@ -1,43 +1,117 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.router import api_router
+from app.api import (
+    memory,
+    current_state,
+    simulation,
+    reflection,
+    planner,
+    trend,
+    insight,
+    timeline,
+    goal,
+)
+
 from app.core.config import settings
-from app.api import memory
-from app.api import current_state
-from fastapi.middleware.cors import CORSMiddleware
-from app.api import simulation
+
 from app.events.event_bus import event_bus
 from app.events.events import MemoryProcessedEvent
-from app.events.handlers import TwinUpdateHandler
-from app.events.decision_handler import DecisionHandler
-from app.api import reflection
-from app.api import planner
-from app.api import trend
-from app.api import insight
-from app.api import timeline
-from app.api import goal
+from app.events.coordinator_handler import CoordinatorHandler
 from app.events.daily_chapter_handler import DailyChapterHandler
-from app.events.reflection_handler import ReflectionHandler
+
+from app.agents.coordinator import Coordinator
+from app.agents.registry import AgentRegistry
+from app.agents.twin_agent import TwinAgent
+from app.agents.decision_agent import DecisionAgent
+from app.agents.reflection_agent import ReflectionAgent
+from app.agents.trend_agent import TrendAgent
+from app.api import (
+    memory,
+    current_state,
+    simulation,
+    reflection,
+    planner,
+    trend,
+    insight,
+    timeline,
+    goal,
+    execution_history,
+)
+from app.api import execution_history
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
 )
+
+
+# ============================================================
+# V2 AGENT REGISTRY
+# ============================================================
+
+agent_registry = AgentRegistry()
+
+agent_registry.register(
+    TwinAgent()
+)
+
+agent_registry.register(
+    DecisionAgent()
+)
+
+agent_registry.register(
+    ReflectionAgent()
+)
+
+agent_registry.register(
+    TrendAgent()
+)
+
+# ============================================================
+# V2 COORDINATOR
+# ============================================================
+
+coordinator = Coordinator(
+    registry=agent_registry,
+)
+
+
+coordinator_handler = CoordinatorHandler(
+    coordinator=coordinator,
+)
+
+
+# ============================================================
+# EVENT SUBSCRIPTIONS
+# ============================================================
+
+# V2 Coordinator is now the single owner of:
+#
+# Twin
+# Decision
+# Insight
+# Planner
+# Goal
+# Reflection
+#
 event_bus.subscribe(
     MemoryProcessedEvent,
-    TwinUpdateHandler(),
+    coordinator_handler,
 )
-event_bus.subscribe(
-    MemoryProcessedEvent,
-    DecisionHandler(),
-)
+
+
+# Daily chapter remains a separate deterministic
+# bookkeeping handler for now.
 event_bus.subscribe(
     MemoryProcessedEvent,
     DailyChapterHandler(),
 )
-event_bus.subscribe(
-    MemoryProcessedEvent,
-    ReflectionHandler(),
-)
+
+
+# ============================================================
+# CORS
+# ============================================================
 
 origins = [
     "http://localhost:5173",
@@ -51,25 +125,50 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(api_router)
 
-app.include_router(memory.router)
-app.include_router(current_state.router)
+# ============================================================
+# ROUTERS
+# ============================================================
+
+app.include_router(
+    api_router
+)
+
+app.include_router(
+    memory.router
+)
+
+app.include_router(
+    current_state.router
+)
+
 app.include_router(
     simulation.router
 )
-app.include_router(reflection.router)   
+
 app.include_router(
-    planner.router,
-)
-app.include_router(
-    trend.router,
+    reflection.router
 )
 
 app.include_router(
-    insight.router,
+    planner.router
+)
+
+app.include_router(
+    trend.router
+)
+
+app.include_router(
+    insight.router
+)
+
+app.include_router(
+    timeline.router
+)
+
+app.include_router(
+    goal.router
 )
 app.include_router(
-    timeline.router,
+    execution_history.router
 )
-app.include_router(goal.router)

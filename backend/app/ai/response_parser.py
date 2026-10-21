@@ -115,59 +115,96 @@ class ResponseParser:
         self,
         raw_response,
     ):
+        # -----------------------------------------
+        # Extract JSON from LLM response
+        # -----------------------------------------
+
+        raw_response = raw_response.strip()
+
+        # Remove markdown code fences
+        if raw_response.startswith("```"):
+            lines = raw_response.splitlines()
+
+            # Remove first line: ```json / ```
+            lines = lines[1:]
+
+            # Remove final ```
+            if lines and lines[-1].strip() == "```":
+                lines = lines[:-1]
+
+            raw_response = "\n".join(lines).strip()
+
+        # -----------------------------------------
+        # If the model added explanatory text,
+        # extract the JSON object.
+        # -----------------------------------------
+
+        start = raw_response.find("{")
+        end = raw_response.rfind("}")
+
+        if start == -1 or end == -1:
+            raise ValueError(
+                "No valid JSON object found in decision response."
+            )
+
+        raw_response = raw_response[start:end + 1]
+
+        # -----------------------------------------
+        # Parse JSON
+        # -----------------------------------------
 
         data = json.loads(raw_response)
 
         result = DecisionResult()
 
+        # -----------------------------------------
+        # Insight
+        # -----------------------------------------
+
         insight = data.get("insight")
 
         if insight:
-
             result.insight = InsightDecision(
-
                 title=insight.get("title", ""),
-
                 description=insight.get("description", ""),
-
-                severity=insight.get("severity", "medium"),
-
+                severity=insight.get(
+                    "severity",
+                    "medium",
+                ),
             )
+
+        # -----------------------------------------
+        # Planner
+        # -----------------------------------------
 
         planner = data.get("planner")
 
         if planner:
-
             result.planner = PlannerDecision(
-
                 title=planner.get("title", ""),
-
                 description=planner.get("description", ""),
-
-                priority=planner.get("priority", "Medium"),
-
+                priority=planner.get(
+                    "priority",
+                    "Medium",
+                ),
             )
+
+        # -----------------------------------------
+        # Goal updates
+        # -----------------------------------------
 
         for g in data.get("goal_updates", []):
 
             result.goals.append(
-
                 GoalDecision(
-
-                    goal_id=g["goal_id"],
-
-                    increment=g["increment"],
-
-                    confidence=g["confidence"],
-
-                    reason=g["reason"],
-
+                    goal_id=int(g["goal_id"]),
+                    increment=float(g["increment"]),
+                    confidence=float(g["confidence"]),
+                    reason=g.get("reason", ""),
                 )
-
             )
 
         return result
-    
     def parse_simulation(
         self,
         raw_response,

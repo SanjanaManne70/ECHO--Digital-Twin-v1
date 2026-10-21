@@ -13,6 +13,7 @@ from app.models.reflection import Reflection
 from app.repositories.reflection_repository import (
     ReflectionRepository,
 )
+from app.agents.context import AgentContext
 
 
 class ReflectionService:
@@ -29,12 +30,9 @@ class ReflectionService:
     # Shared reflection generation logic
     # -------------------------------------------------
 
-    def generate_content(
-        self,
-        context,
-    ):
+    def generate_content(self, context):
 
-        # Brand-new user → don't call the LLM
+        # Brand-new user — don't call the LLM
         if (
             not context["current"]
             or (
@@ -42,7 +40,6 @@ class ReflectionService:
                 and not context["snapshots"]
             )
         ):
-
             return (
                 "Welcome to ECHO! 🌱\n\n"
                 "Your Digital Twin is waiting to learn about you.\n\n"
@@ -51,9 +48,23 @@ class ReflectionService:
                 "generating insights, and helping you understand yourself better."
             )
 
-        return self.agent.reflect(
-            context,
+        agent_context = AgentContext(
+            user_id=None,
+            current_state=context["current"],
+            recent_memories=context["memories"],
+            snapshots=context["snapshots"],
+            trends=context["trend"],
         )
+
+        result = self.agent.run(agent_context)
+
+        if not result.success:
+            error_message = "; ".join(result.errors or [])
+            raise RuntimeError(
+                error_message or "Reflection generation failed."
+            )
+
+        return result.data
 
     # -------------------------------------------------
     # Dashboard API
