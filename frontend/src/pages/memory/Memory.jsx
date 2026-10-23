@@ -83,6 +83,7 @@ export default function Memory() {
         return (
 
             <DashboardLayout>
+                <div className="memory-theme">
 
                 <div className="flex items-center justify-center h-64">
 
@@ -94,6 +95,7 @@ export default function Memory() {
 
                 </div>
 
+            </div>
             </DashboardLayout>
 
         );
@@ -103,6 +105,7 @@ export default function Memory() {
     return (
 
         <DashboardLayout>
+                <div className="memory-theme">
 
             {/* Hero */}
 
@@ -330,7 +333,8 @@ export default function Memory() {
 
             }
 
-        </DashboardLayout>
+        </div>
+            </DashboardLayout>
 
     );
 

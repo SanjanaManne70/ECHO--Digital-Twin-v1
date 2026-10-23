@@ -10,7 +10,7 @@ export default function MemoryCard({ memory }) {
 
             </p>
 
-            <h2 className="text-xl font-bold mt-3">
+            <h2 className="text-xl font-bold mt-3 text-[#172554]">
 
                 {memory.title}
 

@@ -1,15 +1,14 @@
-
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const links = [
-  { to: "/dashboard", label: "🏠 Dashboard" },
-  { to: "/current", label: "👤 Current You" },
-  { to: "/goals", label: "🎯 Goals" },
-  { to: "/timeline", label: "🗓️ Timeline" },
-  { to: "/memory", label: "🧠 Memory" },
-  { to: "/simulation", label: "🤖 Simulation" },
-  { to: "/execution-history", label: "📊 Execution History" },
+  { to: "/dashboard", label: "Dashboard", icon: "⌂" },
+  { to: "/current", label: "Current You", icon: "♟" },
+  { to: "/goals", label: "Goals", icon: "◎" },
+  { to: "/timeline", label: "Timeline", icon: "▦" },
+  { to: "/memory", label: "Memory", icon: "❋" },
+  { to: "/simulation", label: "Simulation", icon: "▣" },
+  { to: "/execution-history", label: "Execution History", icon: "▥" },
 ];
 
 function Sidebar() {
@@ -22,41 +21,31 @@ function Sidebar() {
   }
 
   return (
-    <aside className="fixed left-0 top-0 z-50 flex h-screen w-64 flex-col overflow-y-auto bg-slate-900 p-6 text-white">
-      {/* Brand */}
-      <h1 className="text-2xl font-bold text-blue-400">
-        ECHO
-      </h1>
+    <aside className="echo-sidebar fixed left-0 top-0 z-50 flex h-screen w-64 flex-col overflow-y-auto p-4 text-white">
+      <div className="echo-sidebar-brand">
+        <div className="echo-sidebar-wordmark">ECH<span>O</span></div>
+        <p>YOUR DIGITAL TWIN</p>
+      </div>
 
-      {/* Navigation */}
-      <nav className="mt-10 flex flex-col gap-4">
-        {links.map(({ to, label }) => (
+      <nav id="primary-navigation" className="echo-sidebar-nav mt-8 flex flex-col gap-2">
+        {links.map(({ to, label, icon }) => (
           <NavLink
             key={to}
             to={to}
             end
             className={({ isActive }) =>
-              `rounded-lg p-3 transition-colors ${
-                isActive
-                  ? "bg-blue-500 text-white"
-                  : "text-white hover:bg-slate-700"
-              }`
+              `echo-sidebar-link ${isActive ? "is-active" : ""}`
             }
           >
-            {label}
+            <span className="echo-sidebar-icon" aria-hidden="true">{icon}</span>
+            <span>{label}</span>
           </NavLink>
         ))}
       </nav>
 
-      {/* Logout pinned to the bottom */}
-      <div className="mt-auto border-t border-slate-700 pt-5">
-        <button
-          type="button"
-          onClick={handleLogout}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-left text-red-300 transition-colors hover:bg-red-500/10 hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-red-400"
-        >
-          <span aria-hidden="true">↪</span>
-          <span>Logout</span>
+      <div className="echo-sidebar-logout mt-auto border-t pt-4">
+        <button type="button" onClick={handleLogout} className="echo-logout-button">
+          <span aria-hidden="true">↪</span><span>Logout</span>
         </button>
       </div>
     </aside>

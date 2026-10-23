@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import api from "../../api/api";
 import DashboardLayout from "../../components/layout/DashboardLayout";
+import "../../styles/echo-pages.css";
 
 function formatDate(value) {
   if (!value) return "—";
@@ -158,12 +159,11 @@ function ExecutionHistory() {
 
   return (
     <DashboardLayout>
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+      <div className="echo-upgrade echo-executions">
+        <div className="mx-auto max-w-7xl">
+        <header className="echo-page-header mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-              ECHO · Multi-Agent System
-            </p>
+            <p className="echo-eyebrow">ECHO · MULTI-AGENT SYSTEM</p>
 
             <h1 className="mt-2 text-3xl font-bold text-slate-900">
               📊 Execution History
@@ -429,6 +429,7 @@ function ExecutionHistory() {
             )}
           </section>
         )}
+        </div>
       </div>
     </DashboardLayout>
   );

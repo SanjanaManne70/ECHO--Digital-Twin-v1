@@ -102,3 +102,83 @@
 .diary-page-pop {
     animation: diaryPagePop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* ECHO V2 cosmic backdrop for the Memory Vault.
+   This changes only the page background; diary cards, month emojis,
+   date grouping, interactions, and the selected display/handwritten fonts stay untouched. */
+.memory-theme {
+    --memory-cyan: #22d3ee;
+    --memory-blue: #238bff;
+    --memory-violet: #8b5cf6;
+    position: relative;
+    isolation: isolate;
+    min-height: calc(100vh - 2rem);
+    margin: -1rem;
+    padding: clamp(1rem, 2.3vw, 2rem);
+    overflow: hidden;
+    color: #eef3fc;
+    background:
+        radial-gradient(ellipse at 55% 22%, rgba(21, 66, 164, 0.24), transparent 38%),
+        radial-gradient(ellipse at 90% 58%, rgba(86, 25, 182, 0.16), transparent 39%),
+        radial-gradient(ellipse at 28% 82%, rgba(0, 146, 255, 0.10), transparent 42%),
+        #020817;
+}
+
+.memory-theme::before,
+.memory-theme::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 7% 18%, rgba(79, 157, 255, 0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 17% 68%, rgba(139, 92, 246, 0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 31% 34%, rgba(34, 211, 238, 0.85) 0 1px, transparent 2px),
+        radial-gradient(circle at 43% 82%, rgba(79, 157, 255, 0.85) 0 1px, transparent 2px),
+        radial-gradient(circle at 58% 15%, rgba(139, 92, 246, 0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 69% 54%, rgba(34, 211, 238, 0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 82% 28%, rgba(79, 157, 255, 0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 94% 76%, rgba(139, 92, 246, 0.85) 0 1px, transparent 2px),
+        radial-gradient(circle at 12% 43%, rgba(255, 255, 255, 0.95) 0 1.2px, transparent 2.8px),
+        radial-gradient(circle at 24% 12%, rgba(34, 211, 238, 0.95) 0 1.4px, transparent 3px),
+        radial-gradient(circle at 38% 61%, rgba(167, 139, 250, 0.95) 0 1.2px, transparent 3px),
+        radial-gradient(circle at 52% 45%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2.5px),
+        radial-gradient(circle at 64% 88%, rgba(34, 211, 238, 0.95) 0 1.3px, transparent 3px),
+        radial-gradient(circle at 77% 13%, rgba(255, 255, 255, 0.9) 0 1px, transparent 2.5px),
+        radial-gradient(circle at 89% 47%, rgba(167, 139, 250, 0.95) 0 1.3px, transparent 3px);
+    background-size: 100% 100%;
+    opacity: 0.82;
+    animation: memory-stars-drift 28s linear infinite, memory-stars-twinkle 4.8s ease-in-out infinite;
+}
+
+.memory-theme::after {
+    transform: scale(1.08);
+    opacity: 0.3;
+    filter: blur(1px);
+    animation-duration: 40s, 6.2s;
+    animation-direction: reverse, alternate;
+}
+
+.memory-theme > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes memory-stars-drift {
+    0% { background-position: 0 0; }
+    50% { background-position: 18px -14px; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes memory-stars-twinkle {
+    0%, 100% { opacity: 0.42; filter: brightness(0.9); }
+    50% { opacity: 0.95; filter: brightness(1.8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memory-theme::before,
+    .memory-theme::after {
+        animation: none;
+    }
+}

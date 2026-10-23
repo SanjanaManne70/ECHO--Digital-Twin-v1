@@ -9,6 +9,7 @@ import MonthCard from "../../components/timeline/MonthCard";
 import DayCard from "../../components/timeline/DayCard";
 
 import { groupTimeline } from "../../utils/timelineGrouping";
+import "../../styles/echo-pages.css";
 
 export default function Timeline() {
 
@@ -50,11 +51,7 @@ export default function Timeline() {
 
             <DashboardLayout>
 
-                <h2 className="text-2xl">
-
-                    Loading Journey...
-
-                </h2>
+                <div className="echo-upgrade echo-timeline"><p className="echo-eyebrow">YOUR STORY, OVER TIME</p><h1 className="echo-page-title">Loading your journey...</h1></div>
 
             </DashboardLayout>
 
@@ -68,7 +65,7 @@ export default function Timeline() {
 
             <DashboardLayout>
 
-                <div className="text-center py-24">
+                <div className="echo-upgrade echo-timeline"><div className="echo-empty-state text-center py-24">
 
                     <h2 className="text-3xl font-bold">
 
@@ -82,7 +79,7 @@ export default function Timeline() {
 
                     </p>
 
-                </div>
+                </div></div>
 
             </DashboardLayout>
 
@@ -93,24 +90,13 @@ export default function Timeline() {
     return (
 
         <DashboardLayout>
+          <div className="echo-upgrade echo-timeline">
+            <div className="echo-page-header echo-hero-panel">
 
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 mb-10">
-
-                <h1 className="text-4xl font-bold">
-
-                    📖 Your Journey
-
-                </h1>
-
-                <p className="mt-2 opacity-90">
-
-                    Explore how you've grown over time.
-
-                </p>
-
+                <div><p className="echo-eyebrow">YOUR STORY, OVER TIME</p><h1>📖 Your Journey</h1><p>Explore the moments, milestones, and small wins that make you.</p></div><span className="echo-orb-icon">⌁</span>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 echo-timeline-list">
 
                 {
 
@@ -227,7 +213,7 @@ export default function Timeline() {
                 }
 
             </div>
-
+          </div>
         </DashboardLayout>
 
     );
