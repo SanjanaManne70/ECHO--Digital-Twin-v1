@@ -13,10 +13,8 @@ A Coordinator-based Multi-Agent AI System built with React, FastAPI, PostgreSQL 
 ## 🎬 Project Demo
 
 <!-- Replace the placeholder below with your uploaded demo video link -->
-
-**Watch ECHO in action:** [![ECHO Project Demo](echo thumbnail.png)](https://drive.google.com/file/d/1ndRU5sZ4tOQC4crTxOIif5IUxlAMEkHW/view?usp=sharing)
-
-
+**Watch ECHO in action:** [![ECHO Project Demo](echo%20thumbnail.png)](https://drive.google.com/file/d/1ndRU5sZ4tOQC4crTxOIif5IUxlAMEkHW/view?usp=sharing) 
+▶️ **Click the thumbnail below to play the demo video.**
 
 ---
 
